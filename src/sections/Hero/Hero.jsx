@@ -147,16 +147,14 @@ function Hero() {
           />
         </h2>
         <span>
-          <a href="https://wa.me/9003558391" target="_blank">
+          <a href="https://wa.me/7806872931" target="_blank">
             <img src={whatsappIcon} alt="WhatsApp icon" />
           </a>
-          <a href="https://twitter.com/" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
-          </a>
-          <a href="https://github.com/" target="_blank">
+  
+          <a href="https://github.com/ranjithmca17" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/ranjith-s-mca/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
