@@ -1,0 +1,109 @@
+.container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experienceItem {
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+  padding: 20px;
+  background-color: var(--project-card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experienceItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experienceItem h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+}
+
+.company {
+  font-size: 1.25rem;
+  margin: 5px 0;
+  color: var(--form-text-color);
+  font-weight: 500;
+}
+
+.duration {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: var(--form-text-color);
+  font-style: italic;
+}
+
+.responsibilities {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.responsibilities li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--form-text-color);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif; /* Modern font for list items */
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .container {
+  background-color: #222; /* Black background in dark mode */
+}
+
+[data-theme='dark'] .experienceItem {
+  border-color: #fff; /* White border in dark mode */
+  background-color: #222; /* Slightly lighter black for cards */
+}
+
+[data-theme='dark'] .experienceItem h3,
+[data-theme='dark'] .company,
+[data-theme='dark'] .duration,
+[data-theme='dark'] .responsibilities li {
+  color: #fff; /* White text in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .experienceItem h3 {
+    font-size: 1.5rem;
+  }
+
+  .company {
+    font-size: 1.1rem;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+  }
+
+  .responsibilities li {
+    font-size: 0.9rem;
+  }
+}

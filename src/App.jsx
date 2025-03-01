@@ -36,6 +36,9 @@ import Hero from './sections/Hero/Hero';
 import Projects from './sections/Projects/Projects';
 import Skills from './sections/Skills/Skills';
 import { useTheme } from './common/ThemeContext'; // Assuming you have a theme context
+import Experience from './common/Experience/Experience';
+import Education from './common/Education/Education';
+import Certifications from './common/Certifications/Certifications';
 
 function App() {
   const { theme } = useTheme(); // Get the current theme
@@ -48,6 +51,10 @@ function App() {
       <Hero />
       <Projects />
       <Skills />
+      <Experience/>
+  <Education/>
+      <Certifications/>
+          
       <Contact />
       <Footer />
 

@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -36,4 +36,38 @@
     justify-content: space-evenly;
     padding: 0 30px;
   }
+}
+
+
+
+
+
+
+ */
+
+
+
+
+
+ .container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .sectionTitle {
+  color: #fff; /* White text in dark mode */
 }
