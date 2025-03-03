@@ -1,85 +1,80 @@
 .card {
-    border: 1px solid var(--text-color);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: var(--project-card-bg);
-    margin: 10px;
-    width: calc(25% - 20px); /* Adjust based on your layout */
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .content {
-    padding: 16px;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: var(--text-color);
-  }
-  
-  p {
-    font-size: 1rem;
-    color: var(--form-text-color);
-  }
-  
-  .links {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 16px;
-  }
-  
-  .link {
-    text-decoration: none;
-    color: var(--btn-text-color);
-    background-color: var(--btn-color);
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .link:hover {
-    background-color: var(--btn-text-color);
-    color: var(--btn-color);
-  }
-  
-  /* Dark Theme Adjustments */
-  [data-theme='dark'] .card {
-    border-color: #fff; /* White border in dark mode */
-  }
-  
-  [data-theme='dark'] h3,
-  [data-theme='dark'] p {
-    color: #fff; /* White text in dark mode */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .card {
-      width: calc(33.33% - 20px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .card {
-      width: calc(50% - 20px);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 100%;
-    }
-  }
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--project-card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: var(--form-text-color);
+}
+
+.buildBy {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: var(--form-text-color);
+}
+
+.buildBy strong {
+  color: var(--text-color);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--btn-text-color);
+  background-color: var(--btn-color);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  background-color: var(--btn-text-color);
+  color: var(--btn-color);
+}
+
+/* Dark Theme Adjustments */
+[data-theme='dark'] .card {
+  border-color: #fff; /* White border in dark mode */
+}
+
+[data-theme='dark'] h3,
+[data-theme='dark'] p,
+[data-theme='dark'] .buildBy strong {
+  color: #fff; /* White text in dark mode */
+}

@@ -1,0 +1,127 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.25rem; /* Smaller font size for mobile */
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navLinks {
+  display: none; /* Hide by default on mobile */
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  text-align: center;
+}
+
+.navLinks.open {
+  display: flex; /* Show when menu is open */
+}
+
+.navLinks li {
+  display: block;
+}
+
+.navLinks a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  cursor: pointer;
+}
+
+.navLinks a:hover {
+  color: var(--btn-color);
+}
+
+.navLinks a.active {
+  border-bottom: 2px solid var(--btn-color);
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.themeToggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: block; /* Show menu button on mobile */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-color);
+}
+
+.menuButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design for Tablets and Desktops */
+@media (min-width: 768px) {
+  .container {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Larger font size for tablets and desktops */
+  }
+
+  .navLinks {
+    display: flex; /* Show links in a row */
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .navLinks li {
+    display: inline-block;
+  }
+
+  .navLinks a {
+    font-size: 1rem; /* Larger font size for tablets and desktops */
+  }
+
+  .menuButton {
+    display: none; /* Hide menu button on larger screens */
+  }
+}
+
+/* Responsive Design for Large Desktops */
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 2rem; /* Even larger font size for large desktops */
+  }
+
+  .navLinks a {
+    font-size: 1.2rem; /* Larger font size for large desktops */
+  }
+}

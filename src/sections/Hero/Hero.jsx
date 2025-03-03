@@ -1,10 +1,8 @@
 import React from "react";
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/Design uten navn.png';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import twitterLight from '../../assets/twitter-light.svg';
-import twitterDark from '../../assets/twitter-dark.svg';
+// import sun from '../../assets/sun.svg';
+// import moon from '../../assets/moon.svg';
 import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
@@ -16,10 +14,10 @@ import Typewriter from "typewriter-effect";
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
-  const themeIcon = theme === 'light' ? sun : moon;
-  const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
+  // const themeIcon = theme === 'light' ? sun : moon;
+
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
   const whatsappIcon = theme === 'light' ? whatsappLight : whatsappDark;
@@ -32,12 +30,12 @@ function Hero() {
           className={styles.hero}
           alt="Profile picture of Ranjith S"
         />
-        <img
+        {/* <img
           className={styles.colorMode}
           src={themeIcon}
           alt="Color mode icon"
           onClick={toggleTheme}
-        />
+        /> */}
       </div>
       <div className={styles.info}>
         <h1>Ranjith S</h1>
@@ -51,7 +49,7 @@ function Hero() {
               ],
               autoStart: true,
               loop: true,
-              cursor: "", // Remove the cursor
+              cursor: "|", 
             }}
           />
         </h2>

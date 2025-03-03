@@ -39,6 +39,7 @@ import { useTheme } from './common/ThemeContext'; // Assuming you have a theme c
 import Experience from './common/Experience/Experience';
 import Education from './common/Education/Education';
 import Certifications from './common/Certifications/Certifications';
+import Navbar from './common/NavBar/NavBar';
 
 function App() {
   const { theme } = useTheme(); // Get the current theme
@@ -47,7 +48,7 @@ function App() {
     <>
       {/* Bubble animation takes the theme to adjust bubble colors */}
       <BubbleAnimation theme={theme} />
-     
+     <Navbar/>
       <Hero />
       <Projects />
       <Skills />
