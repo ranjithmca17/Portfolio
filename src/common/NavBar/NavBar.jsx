@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { IoMdMenu, IoMdCloseCircleOutline } from "react-icons/io"; // Icons for menu open/close
-// import { TiThMenuOutline } from "react-icons/ti"; // Alternative menu icon
-import styles from "./Navbar.module.css";
+import { IoMdMenu, IoMdClose } from "react-icons/io"; // Icons for menu open/close
+import styles from "./Navbar.module.css"; // Import CSS module for styling
 import { useTheme } from "../ThemeContext"; // Assuming you have a theme context
 import sun from "../../assets/sun.svg"; // Light theme icon
 import moon from "../../assets/moon.svg"; // Dark theme icon
@@ -28,7 +27,7 @@ function Navbar() {
   return (
     <nav className={`${styles.navbar} ${theme === "dark" ? styles.dark : ""}`}>
       <div className={styles.container}>
-        {/* Logo or Brand Name */}
+        {/* Logo */}
         <Link
           to="hero"
           smooth={true}
@@ -36,18 +35,8 @@ function Navbar() {
           className={styles.logo}
           onClick={() => handleLinkClick("home")}
         >
-          Ranjith S
+          RS
         </Link>
-
-        {/* Hamburger Menu for Mobile */}
-        <button className={styles.menuButton} onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <IoMdCloseCircleOutline size={24} />
-          ) : (
-            <IoMdMenu size={24} />
-          )}{" "}
-          {/* Toggle between open/close icons */}
-        </button>
 
         {/* Navigation Links */}
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ""}`}>
@@ -133,6 +122,11 @@ function Navbar() {
         {/* Theme Toggle Button */}
         <button className={styles.themeToggle} onClick={toggleTheme}>
           <img src={themeIcon} alt="Theme Toggle" />
+        </button>
+
+        {/* Mobile Menu Button */}
+        <button className={styles.menuButton} onClick={toggleMenu}>
+          {isMenuOpen ? <IoMdClose size={24} /> : <IoMdMenu size={24} />}
         </button>
       </div>
     </nav>

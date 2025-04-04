@@ -1,3 +1,4 @@
+/* Base Navbar Styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -17,22 +18,36 @@
   margin: 0 auto;
 }
 
+/* Logo Styles */
 .logo {
-  font-size: 1.25rem; /* Smaller font size for mobile */
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem; /* Added padding for better spacing */
 }
 
+.logo:hover {
+  color: var(--btn-color);
+}
+
+/* Navigation Links */
 .navLinks {
-  display: none; /* Hide by default on mobile */
+  display: none; /* Hidden by default on mobile */
   flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 1rem;
   text-align: center;
+  background-color: var(--background-color);
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navLinks.open {
@@ -47,23 +62,32 @@
   color: var(--text-color);
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  cursor: pointer;
+  padding: 0.75rem 1rem;
+  display: block;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navLinks a:hover {
   color: var(--btn-color);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .navLinks a.active {
   border-bottom: 2px solid var(--btn-color);
 }
 
+/* Theme Toggle Button */
 .themeToggle {
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  transition: transform 0.3s ease;
+  margin-left: 1rem; /* Added margin for better spacing */
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
 }
 
 .themeToggle img {
@@ -73,12 +97,19 @@
 
 /* Mobile Menu Button */
 .menuButton {
-  display: block; /* Show menu button on mobile */
+  display: none; /* Hidden by default */
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   color: var(--text-color);
+  z-index: 1001; /* Ensure it's above the navLinks */
+  transition: color 0.3s ease;
+  margin-left: auto; /* Push the menu button to the right */
+}
+
+.menuButton:hover {
+  color: var(--btn-color);
 }
 
 .menuButton svg {
@@ -86,42 +117,78 @@
   height: 24px;
 }
 
-/* Responsive Design for Tablets and Desktops */
-@media (min-width: 768px) {
+/* Responsive Design for Tablets and Smaller Desktops (928px and below) */
+@media (max-width: 928px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .navLinks {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navLinks.open {
+    display: flex; /* Show links when menu is open */
+  }
+
+  .menuButton {
+    display: block; /* Show menu button */
+  }
+
+  .themeToggle {
+    margin-left: auto; /* Push theme toggle to the right */
+  }
+}
+
+/* Responsive Design for Larger Tablets and Desktops (929px and above) */
+@media (min-width: 929px) {
   .container {
     padding: 1rem 2rem;
   }
 
   .logo {
-    font-size: 1.5rem; /* Larger font size for tablets and desktops */
+    font-size: 1.75rem;
+    padding: 0.5rem 0; /* Adjusted padding for better alignment */
   }
 
   .navLinks {
     display: flex; /* Show links in a row */
     flex-direction: row;
     gap: 2rem;
-  }
-
-  .navLinks li {
-    display: inline-block;
+    position: static; /* Reset position for desktop */
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: 2rem; /* Added margin for better spacing */
   }
 
   .navLinks a {
-    font-size: 1rem; /* Larger font size for tablets and desktops */
+    padding: 0.5rem 0; /* Adjusted padding for better alignment */
   }
 
   .menuButton {
     display: none; /* Hide menu button on larger screens */
   }
+
+  .themeToggle {
+    margin-left: 2rem; /* Added margin for better spacing */
+  }
 }
 
-/* Responsive Design for Large Desktops */
+/* Responsive Design for Large Desktops (1200px and above) */
 @media (min-width: 1200px) {
   .logo {
-    font-size: 2rem; /* Even larger font size for large desktops */
+    font-size: 2rem;
   }
 
   .navLinks a {
-    font-size: 1.2rem; /* Larger font size for large desktops */
+    font-size: 1.1rem;
   }
 }

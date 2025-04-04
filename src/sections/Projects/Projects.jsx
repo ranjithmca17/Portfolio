@@ -17,8 +17,8 @@ function Projects() {
 
         <ProductCard
           src={Project5}
-          liveLink="https://github.com/ranjithmca17/EcomProject"
-          githubLink="ecom-project-ranjith-mca.vercel.app"
+          liveLink="https://ecom-project-ranjith-mca.vercel.app/"
+          githubLink="https://github.com/ranjithmca17/EcomProject"
           h3="Ecommerce"
           p="Full stack Project"
           buildBy="Frontend: React.js, Backend: Node.js, Express.js, MongoDB"

@@ -70,11 +70,32 @@ p {
 
 /* Dark Theme Adjustments */
 [data-theme='dark'] .card {
-  border-color: #fff; /* White border in dark mode */
+  border-color: #555; /* Darker border for better contrast */
+  background-color: #1e1e1e; /* Dark background for the card */
 }
 
-[data-theme='dark'] h3,
-[data-theme='dark'] p,
+[data-theme='dark'] h3 {
+  color: #fff; /* White text for headings */
+}
+
+[data-theme='dark'] p {
+  color: #ccc; /* Light gray for paragraph text */
+}
+
+[data-theme='dark'] .buildBy {
+  color: #ccc; /* Light gray for buildBy text */
+}
+
 [data-theme='dark'] .buildBy strong {
-  color: #fff; /* White text in dark mode */
+  color: #fff; /* White text for strong elements */
+}
+
+[data-theme='dark'] .link {
+  color: #1e1e1e; /* Dark text for buttons */
+  background-color: #fff; /* White background for buttons */
+}
+
+[data-theme='dark'] .link:hover {
+  background-color: #1e1e1e; /* Dark background on hover */
+  color: #fff; /* White text on hover */
 }
